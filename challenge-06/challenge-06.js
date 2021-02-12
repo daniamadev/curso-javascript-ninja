@@ -34,19 +34,19 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(number) {
-  if(number >= 0 && number <= 5) return `O time que está em ${number} é o ${teams[number]}`
-  return `Não temos a informação do time que está nessa posição.`
+  return (number >= 0 && number <= 5) ? `O time que está em ${number} é o ${teams[number-1]}`
+  : `Não temos a informação do time que está nessa posição.`
 }
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-showTeamPosition(0)
-showTeamPosition(1)
-showTeamPosition(2)
-showTeamPosition(3)
-showTeamPosition(8)
+console.log(showTeamPosition(0))
+console.log(showTeamPosition(1))
+console.log(showTeamPosition(2))
+console.log(showTeamPosition(3))
+console.log(showTeamPosition(8))
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
@@ -71,21 +71,22 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     "Não temos o equivalente hexadecimal para [COR]."
 */
 function convertToHex(cor) {
+  var frase = `O hexadecimal para a cor ${cor} é `
   switch(cor) {
     case 'purple':
-      return `O hexadecimal para a cor ${cor} é '#5d1b58'.`
+      return `${frase} #5d1b58.`
     break;
     case 'green':
-      return `O hexadecimal para a cor ${cor} é '#205d1b'.`
+      return `${frase} #205d1b.`
     break;
     case 'gray':
-      return `O hexadecimal para a cor ${cor} é '#a9aba8'.`
+      return `${frase} #a9aba8.`
     break;
     case 'yellow':
-      return `O hexadecimal para a cor ${cor} é '#a9aba8'.`
+      return `${frase} #FFFF00.`
     break;
     case 'pink':
-      return `O hexadecimal para a cor ${cor} é '#e42db8'.`
+      return `${frase} #e42db8.`
     break;
     default:
       return `Não temos o equivalente hexadecimal para ${cor}.`
