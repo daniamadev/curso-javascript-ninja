@@ -27,7 +27,7 @@ Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 function showName() {
-  return showName.name
+  return `Daniela Amadeu`
 }
 
 /*
@@ -58,30 +58,29 @@ function calculator(arg) {
   if(arg === '+') {
     return function(a,b) {
       return (`Resultado da operação: ${a}${arg}${b} = ${a+b}` )
-    }
+    };
   }
   if(arg === '-') {
     return function(a,b){
       return (`Resultado da operação: ${a}${arg}${b} = ${a-b}` )
-    }
+    };
   }
   if(arg === '*') {
     return function(a,b) {
       return (`Resultado da operação: ${a}${arg}${b} = ${a*b}` )
-    }
+    };
   }
   if(arg === '%') {
     return function(a,b) {
       return (`Resultado da operação: ${a}${arg}${b} = ${a%b}` )
-    }
+    };
   }
   if(arg === '/') {
     return function(a,b){
       return (`Resultado da operação: ${a}${arg}${b} = ${a/b}` )
-    }
+    };
   }
   return `Operação inválida.`
-
 }
 
 /*
